@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("matej123-coder/DevOps-Lab4")
+       app = docker.build("matej123-coder/devops-lab4")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'doockerhub') {
